@@ -2,10 +2,10 @@
 <c3p0-config>
 
  <named-config name="hello">
-         <property name="user">root</property>
-         <property name="password">root</property>
+         <property name="user">yiban</property>
+         <property name="password">yibanday</property>
          <property name="driverClass">com.mysql.jdbc.Driver</property>
-         <property name="jdbcUrl">jdbc:mysql:///baoming?characterEncoding=utf8</property>
+         <property name="jdbcUrl">jdbc:mysql://hkl2/yiban?characterEncoding=utf8</property>
          
          
 		 <property name="acquireIncrement">50</property> 
