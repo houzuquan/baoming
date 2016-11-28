@@ -1,0 +1,364 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a,
+img {
+	border: 0;
+}
+
+body {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: black;
+}
+
+ol {
+	margin-left: 30px;
+}
+
+.clear {
+	clear: both;
+}
+
+progress {
+	z-index: 999;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 5px;
+	transition: all 0.5s;
+}
+
+#canvas-club {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.content {
+	overflow-y: auto;
+	z-index: 999;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+.content form {
+	z-index: 999;
+	min-width: 320px;
+	max-width: 720px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.content form div.page {
+	width: 100%;
+	z-index: 999;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: all 0.5s;
+}
+
+.content form div.page>h4 {
+	color: rgba(245, 245, 245, 1);
+	text-align: center;
+	box-sizing: border-box;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	border-bottom: 2px dashed rgba(100, 100, 245, 1);
+	font-size: 20pt;
+}
+
+.content form div.page>div.pageContent {
+	position: absolute;
+	top: 35pt;
+	left: 0;
+	right: 0;
+	bottom: 80pt;
+	overflow: auto;
+}
+
+.content form div.page div.btnGroup {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.content input,
+.content select,
+.content textarea {
+	display: block;
+	width: 100%;
+	min-height: 30pt;
+	box-sizing: border-box;
+	padding: 5px;
+	color: rgba(245, 245, 245, 1);
+	font-weight: 900;
+	font-size: 16pt;
+	background: rgba(0, 0, 0, 0);
+	margin-bottom: 10px;
+	border: 1px solid rgba(245, 245, 245, 1);
+	box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+	resize: none;
+}
+
+.content select {
+	color: rgb(200, 200, 200);
+}
+
+.content textarea {
+	min-height: 150pt;
+}
+
+.content input:focus,
+.content select:focus,
+.content textarea:focus {
+	background: rgba(245, 245, 245, 1);
+	color: rgba(55, 55, 55, 1);
+}
+
+.success,
+.sectionBox {
+	color: rgba(245, 245, 245, 1);
+}
+
+.success a,
+.sectionBox a {
+	color: rgba(245, 245, 245, 1);
+	text-decoration: none;
+}
+
+.success h4,
+.sectionBox h4 {
+	text-align: center;
+	box-sizing: border-box;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	border-bottom: 2px dashed rgba(100, 100, 245, 1);
+	font-size: 20pt;
+}
+
+.success p.ok {
+	font-size: 40pt;
+	width: 100pt;
+	height: 100pt;
+	line-height: 100pt;
+	border: 2px solid rgba(245, 245, 245, 1);
+	box-shadow: 0 0 40px rgba(245, 245, 245, 1);
+	background: rgba(55, 55, 55, 0.5);
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 50%;
+}
+
+.success p#msg {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.success a {
+	display: block;
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+	width: 200pt;
+	text-align: center;
+	height: 50pt;
+	line-height: 50pt;
+	border: 2px dashed rgba(245, 245, 245, 1);
+	font-size: 20pt;
+	text-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+
+.sectionBox {}
+
+.sectionBox .sectionInfoBox {
+	position: absolute;
+	top: 35pt;
+	left: 0;
+	right: 0;
+	bottom: 50pt;
+}
+
+.sectionBox .sectionInfoBox>ul {
+	float: left;
+	list-style-type: none;
+	width: 50pt;
+	text-align: center;
+}
+
+.sectionBox .sectionInfoBox>ul>li {
+	height: 30pt;
+	line-height: 30pt;
+	font-weight: 900;
+	font-size: 14pt;
+	background: rgba();
+	transition: all 0.5s;
+	cursor: pointer;
+}
+
+.sectionBox .sectionInfoBox>ul>li.active {
+	background: rgba(100, 100, 100, 1);
+}
+
+.sectionBox .sectionInfoBox>div.infoBox {
+	float: left;
+	height: 100%;
+	margin-left: 2pt;
+	overflow: auto;
+	background: rgba(55, 55, 55, .8);
+	width: calc(100% - 52pt);
+}
+
+.sectionBox .sectionInfoBox>div>div.info {
+	display: block;
+	position: absolute;
+	top: 200%;
+	transition: all 0.5s;
+}
+
+.sectionBox .sectionInfoBox>div>div.infoActive>p {
+	text-indent: 2em;
+}
+
+.sectionBox .sectionInfoBox>div>div.infoDisable {
+	-webkit-animation: infoOut .5s ease 0s 1 normal;
+	-moz-animation: infoOut .5s ease 0s 1 normal;
+	-ms-animation: infoOut .5s ease 0s 1 normal;
+	animation: infoOut .5s ease 0s 1 normal;
+}
+
+.sectionBox .sectionInfoBox>div>div.infoActive {
+	display: block;
+	-webkit-animation: infoIn .5s ease 0s 1 normal !important;
+	-moz-animation: infoIn .5s ease 0s 1 normal !important;
+	-ms-animation: infoIn .5s ease 0s 1 normal !important;
+	animation: infoIn .5s ease 0s 1 normal !important;
+	opacity: 1;
+}
+
+@keyframes infoIn {
+	from {
+		position: absolute;
+		top: 200%;
+		opacity: 0;
+	}
+	to {
+		position: absolute;
+		top: 0%;
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes infoIn {
+	from {
+		position: absolute;
+		top: 200%;
+		opacity: 0;
+	}
+	to {
+		position: absolute;
+		top: 0%;
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes infoIn {
+	from {
+		position: absolute;
+		top: 200%;
+		opacity: 0;
+	}
+	to {
+		position: absolute;
+		top: 0%;
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes infoIn {
+	from {
+		position: absolute;
+		top: 200%;
+		opacity: 0;
+	}
+	to {
+		position: absolute;
+		top: 0%;
+		opacity: 1;
+	}
+}
+
+@keyframes infoOut {
+	from {
+		position: absolute;
+		top: 0%;
+		opacity: 1;
+	}
+	to {
+		position: absolute;
+		top: 200%;
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes infoOut {
+	from {
+		position: absolute;
+		top: 0%;
+		opacity: 1;
+	}
+	to {
+		position: absolute;
+		top: 200%;
+		opacity: 0;
+	}
+}
+
+@-ms-keyframes infoOut {
+	from {
+		position: absolute;
+		top: 0%;
+		opacity: 1;
+	}
+	to {
+		position: absolute;
+		top: 200%;
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes infoOut {
+	from {
+		position: absolute;
+		top: 0%;
+		opacity: 1;
+	}
+	to {
+		position: absolute;
+		top: 200%;
+		opacity: 0;
+	}
+}

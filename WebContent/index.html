@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="js/prefixfree.min.js"></script>
+		<script src="js/stopExecutionOnTimeout.js"></script>
+		<script src="js/ajax.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<canvas id="canvas-club">
+			很抱歉，您的浏览器不支持显示页面内容
+		</canvas>
+		<progress max="0" value="1" id="progress">
+			<span id="progressNum">
+				0
+			</span>%
+		</progress>
+		<div class="content">
+			<form action="#" method="post" onsubmit="return false;">
+				<div class="page">
+					<div class="sectionBox">
+						<h4>部门简介</h4>
+						<div class="sectionInfoBox">
+							<ul class="leftNav">
+								<li class="active">易班</li>
+								<li>站务部</li>
+								<li>宣传部</li>
+								<li>技术部</li>
+								<li>运营部</li>
+							</ul>
+							<div class="infoBox">
+								<div class="info">
+									<p>
+										易班网是高校教育教学、生活服务、文化娱乐的综合性互动社区。这里融合了论坛、社交、博客、微博等主流的Web2.0应用，为在校师生提供定制论坛,博客,相册,网盘,群组,交友等教育信息化一站式服务功能。
+									</p>
+									<p>
+										校易班学生工作站是以易班为平台、以学生为主体、以服务学生的成长与发展为目标的学生组织。工作站在学校易班发展中心的指导下，以网络为平台，充分利用网络的优势实现教育教学、思政教育、文化娱乐、生活服务等“一站多功能”化，努力把易班建设为服务全校师生的网上家园。
+									</p>
+									<p>
+										校易班学生工作站主要负责校级平台维护、宣传推广、线上内容建设、主动开展线上线下活动、引导和传播校园易文化、管理相关站务、配合校班易发展中心完成易班共建相关任务等。工作站下设4个部门，站务部、宣传部、技术部和运营部。
+									</p>
+
+								</div>
+								<div class="info">
+									<ol>
+										<li>负责工作站人员招募、考核与管理等日常管理工作；</li>
+										<li>负责工作站规章制度建设及实施；</li>
+										<li>负责组织工作会议及工作站档案资料管理；</li>
+										<li>负责工作站资产、财务的管理工作；</li>
+										<li>负责对外交流与接待工作；</li>
+									</ol>
+
+								</div>
+								<div class="info">
+									<ol>
+										<li>负责网络监控、易班动态巡视及校内外时事热点和学生动态的收集；</li>
+										<li>负责学校易班建设与推广的各项宣传工作；</li>
+										<li>负责易班线上线下活动的新闻拍摄、图片资料采集；</li>
+										<li>负责网站、易班APP内容建设（内容更新，调研发布等）；</li>
+										<li>负责校、系各项易班活动数据资料的收集与保存；</li>
+										<li>负责易班各类宣传品设计制作（横幅、海报、视频、ppt制作等）；</li>
+										<li>负责网站及APP视觉设计。</li>
+										<li>负责大型线上、线下活动的策划、组织与协调工作；</li>
+										<li>负责创意文案的撰写工作；</li>
+										<li>负责线上产品的整体形象包装、网站及移动APP风格包装；</li>
+									</ol>
+								</div>
+								<div class="info">
+									<ol>
+										<li>负责校易班平台的技术维护工作；</li>
+										<li>负责易班网站运营管理、功能开发及APP研发工作；</li>
+										<li>负责工作站电脑的日常护理检查工作； </li>
+										<li>负责对校级工作站及各系易班工作站的技术培训，编制培训资料；</li>
+										<li>负责易班线上信息管理、用户管理及信息员队伍管理；</li>
+									</ol>
+
+								</div>
+								<div class="info">
+									<ol>
+										<li>负责与各系易班学生工作站的联系工作；</li>
+										<li>负责校易班工作站的运营与推广工作；</li>
+										<li>负责校外联系与合作，积极开拓各类外部资源。</li>
+										<li>负责收集用户反馈的意见及用户需求。</li>
+									</ol>
+
+								</div>
+							</div>
+
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="btnGroup">
+						<input type="button" name="" id="" value="填写报名表" onclick="page('page',2);" />
+					</div>
+				</div>
+				<div class="page">
+					<h4>报名表</h4>
+					<div class="pageContent">
+						<input type="text" name="" id="stuId" value="" placeholder="学号" />
+						<input type="text" name="" id="stuName" value="" placeholder="姓名" />
+						<input type="text" name="" id="stuQq" value="" placeholder="QQ" />
+						<input type="text" name="" id="stuPhone" value="" placeholder="手机号" />
+						<select name="" id="stuSection1">
+							<option value="" disabled="disabled" selected="selected">请选择竞选部门</option>
+							<option value="站务部">站务部</option>
+							<option value="宣传部">宣传部</option>
+							<option value="技术部">技术部</option>
+							<option value="运营部">运营部</option>
+						</select>
+						<select name="" id="stuSection2">
+							<option value="" disabled="disabled" selected="selected">请选择备选部门</option>
+							<option value="站务部">站务部</option>
+							<option value="宣传部">宣传部</option>
+							<option value="技术部">技术部</option>
+							<option value="运营部">运营部</option>
+						</select>
+						<!--<input type="file" name="" id="stuPhoto" value="" accept="image/png,image/gif,image/jpeg" style="display: none;" />
+						<input type="button" name="" id="" value="上传照片" onclick="document.getElementById('stuPhoto').click();" />-->
+					</div>
+					<div class="btnGroup">
+						<input type="button" name="" id="" value="返回部门简介" onclick="page('page',1);" />
+						<input type="button" name="" id="" value="下一步" onclick="page('page',3);" />
+					</div>
+				</div>
+				<div class="page">
+					<h4>报名表</h4>
+					<textarea name="" id="stuHobby" rows="" cols="" placeholder="爱好特长"></textarea>
+					<div class="btnGroup">
+						<input type="button" name="" id="" value="上一步" onclick="page('page',2);" />
+						<input type="button" name="" id="" value="下一步" onclick="page('page',4);" />
+					</div>
+				</div>
+				<div class="page">
+					<h4>报名表</h4>
+					<textarea name="" id="stuJob" rows="" cols="" placeholder="在任职务"></textarea>
+					<div class="btnGroup">
+						<input type="button" name="" id="" value="上一步" onclick="page('page',3);" />
+						<input type="button" name="" id="" value="下一步" onclick="page('page',5);" />
+					</div>
+				</div>
+				<div class="page">
+					<h4>报名表</h4>
+					<textarea name="" id="stuInfo" rows="" cols="" placeholder="个人简介与自我评价"></textarea>
+					<div class="btnGroup">
+						<input type="button" name="" id="" value="上一步" onclick="page('page',4);" />
+						<input type="button" name="" id="" value="下一步" onclick="page('page',6);" />
+					</div>
+				</div>
+				<div class="page">
+					<h4>报名表</h4>
+					<textarea name="" id="stuDream" rows="" cols="" placeholder="如果你成功加入易班工作站，请问你打算如何达成自我实现？"></textarea>
+					<div class="btnGroup">
+						<input type="button" name="" id="" value="上一步" onclick="page('page',5);" />
+						<input type="button" value="提交报名表" onclick="sendMyInfo();" />
+					</div>
+				</div>
+				<div class="page">
+					<div class="success">
+						<h4>报名结果</h4>
+						<p class="ok">成功</p>
+						<p id="msg">您已经报名成功</p>
+						<a href="https://jq.qq.com/?_wv=1027&k=41uWQRY">加入【易班招新群】</a>
+					</div>
+				</div>
+			</form>
+		</div>
+		<script>
+			function sendMyInfo() {
+				var ok = document.getElementsByClassName('ok')[0];
+				var msg = document.getElementById('msg');
+				var stuId = document.getElementById('stuId').value;
+				var stuName = document.getElementById('stuName').value;
+				var stuQq = document.getElementById('stuQq').value;
+				var stuPhone = document.getElementById('stuPhone').value;
+				var stuSection1 = document.getElementById('stuSection1').value;
+				var stuSection2 = document.getElementById('stuSection2').value;
+				var stuHobby = document.getElementById('stuHobby').value;
+				var stuJob = document.getElementById('stuJob').value;
+				var stuInfo = document.getElementById('stuInfo').value;
+				var stuDream = document.getElementById('stuDream').value;
+				if(stuId == '') {
+					alert('请输入学号！');
+					return false;
+				}
+				if(stuName == '') {
+					alert('请输入姓名！');
+					return false;
+				}
+				if(stuQq == '') {
+					alert('请输入QQ号！');
+					return false;
+				}
+				if(stuPhone == '') {
+					alert('请输入手机号！');
+					return false;
+				}
+				if(stuSection1 == '') {
+					alert('请选择竞选部门！');
+					return false;
+				}
+				if(stuSection2 == '') {
+					alert('请选择备选部门！');
+					return false;
+				}
+				if(stuHobby == '') {
+					alert('请填写爱好！');
+					return false;
+				}
+				if(stuInfo == '') {
+					alert('请填写个人简介！');
+					return false;
+				}
+				if(stuDream == '') {
+					alert('请填写当前页面的内容！');
+					return false;
+				}
+				$ajax({
+					url: "sendMyInfo.json",
+					data: "stuId=" + stuId + "&stuName=" + stuName + "&stuQQ=" + stuQq + "&stuPhone=" + stuPhone + "&stuSection1=" + stuSection1 + "&stuSection2=" + stuSection2 + "&stuHobby=" + stuHobby + "&stuJob=" + stuJob + "&stuInfo=" + stuInfo + "&stuDream=" + stuDream,
+					method: "post",
+					dataType: "json",
+					callBack: function(data) {
+						console.log(data);
+						switch(data.code * 1) {
+							case 200:
+								ok.innerHTML = '成功';
+								msg.innerHTML = data.msg;
+								break;
+							case 201:
+								ok.innerHTML = '成功';
+								msg.innerHTML = data.msg;
+								break;
+							case 202:
+								ok.innerHTML = '失败';
+								msg.innerHTML = data.msg;
+								break;
+							default:
+								ok.innerHTML = '失败';
+								msg.innerHTML = data.msg;
+
+						}
+						page('page', 7);
+					},
+					error: function(status) {
+						console.log(status);
+						alert("获取数据错误!");
+					}
+				});
+			}
+
+			function leftNav() {
+				var leftNav = document.getElementsByClassName('leftNav')[0];
+				var li = leftNav.getElementsByTagName('li');
+				for(var i = 0; i < li.length; i++) {
+					li[i].onclick = function() {
+						var active = document.getElementsByClassName('active')[0];
+						active.className = '';
+						this.className = 'active';
+						showInfo(this.getAttribute('data-index'));
+					}
+					li[i].setAttribute('data-index', i);
+				}
+				setTimeout(function() {
+					li[0].click();
+				}, 500);
+			}
+
+			function showInfo(index) {
+				var info = document.getElementsByClassName('info');
+				var infoActive = document.getElementsByClassName('infoActive')[0];
+				if(infoActive) {
+					infoActive.className = 'info infoDisable';
+				}
+
+				info[index * 1].className = 'infoActive';
+			}
+
+			function page(elmid, toPage) {
+				var page = document.getElementsByClassName(elmid);
+				var progress = document.getElementById('progress');
+				var width = page[0].parentElement.parentElement.offsetWidth;
+				toPage *= 1;
+				progress.setAttribute('value', toPage);
+				progress.setAttribute('max', page.length);
+				var left = -(toPage - 1) * width;
+				//						console.log(toPage*1);
+				for(var i = 0; i < page.length; i++) {
+					page[i].style.left = i * width + left + 'px';
+				}
+			}
+
+			function inputWrite() {
+				var input = document.getElementsByTagName('input');
+				var textarea = document.getElementsByTagName('textarea');
+				for(var i = 0; i < input.length; i++) {
+					if(input[i].getAttribute('type') != 'button') {
+						input[i].onfocus = function() {
+							hiddenBtn();
+							this.parentElement.style.bottom = '0pt';
+						}
+						input[i].onblur = function() {
+							showBtn();
+							this.parentElement.style.bottom = '80pt';
+						}
+					}
+
+				}
+				for(var i = 0; i < textarea.length; i++) {
+					textarea[i].onfocus = function() {
+						hiddenBtn();
+					}
+					textarea[i].onblur = function() {
+						showBtn();
+					}
+				}
+			}
+
+			function showBtn() {
+				var btnGroup = document.getElementsByClassName('btnGroup');
+				var btn = [];
+				for(var i = 0; i < btnGroup.length; i++) {
+					var input2 = btnGroup[i].getElementsByTagName('input');
+					for(var j = 0; j < input2.length; j++) {
+						input2[j].style.display = 'block';
+					}
+				}
+			}
+
+			function hiddenBtn() {
+				var btnGroup = document.getElementsByClassName('btnGroup');
+				var btn = [];
+				for(var i = 0; i < btnGroup.length; i++) {
+					var input2 = btnGroup[i].getElementsByTagName('input');
+					for(var j = 0; j < input2.length; j++) {
+						input2[j].style.display = 'none';
+					}
+				}
+			}
+			window.onload = function() {
+					leftNav();
+					page("page", 1);
+					inputWrite();
+					var body = document.getElementsByTagName('body')[0];
+					var c = document.getElementById("canvas-club");
+					var ctx = c.getContext("2d");
+					var w = c.width = window.innerWidth;
+					var h = c.height = window.innerHeight;
+					var clearColor = 'rgba(0, 0, 0, 0.1)';
+					var max = 10;
+					var drops = [];
+					setup();
+					anim();
+
+					function random(min, max) {
+						return Math.random() * (max - min) + min;
+					}
+
+					function O() {}
+
+					O.prototype = {
+						init: function() {
+							this.x = random(0, w);
+							this.y = 0;
+							this.color = 'hsl(180, 100%, 50%)';
+							this.w = 2;
+							this.h = 1;
+							this.vy = random(4, 5);
+							this.vw = 3;
+							this.vh = 1;
+							this.size = 2;
+							this.hit = random(h * .8, h * .9);
+							this.a = 1;
+							this.va = .96;
+						},
+						draw: function() {
+							if(this.y > this.hit) {
+								ctx.beginPath();
+								ctx.moveTo(this.x, this.y - this.h / 2);
+
+								ctx.bezierCurveTo(
+									this.x + this.w / 2, this.y - this.h / 2,
+									this.x + this.w / 2, this.y + this.h / 2,
+									this.x, this.y + this.h / 2);
+
+								ctx.bezierCurveTo(
+									this.x - this.w / 2, this.y + this.h / 2,
+									this.x - this.w / 2, this.y - this.h / 2,
+									this.x, this.y - this.h / 2);
+
+								ctx.strokeStyle = 'hsla(180, 100%, 50%, ' + this.a + ')';
+								ctx.stroke();
+								ctx.closePath();
+
+							} else {
+								ctx.fillStyle = this.color;
+								ctx.fillRect(this.x, this.y, this.size, this.size * 5);
+							}
+							this.update();
+						},
+						update: function() {
+							if(this.y < this.hit) {
+								this.y += this.vy;
+							} else {
+								if(this.a > .03) {
+									this.w += this.vw;
+									this.h += this.vh;
+									if(this.w > 100) {
+										this.a *= this.va;
+										this.vw *= .98;
+										this.vh *= .98;
+									}
+								} else {
+									this.init();
+								}
+							}
+
+						}
+					}
+
+					function resize() {
+						w = c.width = window.innerWidth;
+						h = c.height = window.innerHeight;
+					}
+
+					function setup() {
+						for(var i = 0; i < max; i++) {
+							(function(j) {
+								setTimeout(function() {
+									var o = new O();
+									o.init();
+									drops.push(o);
+								}, j * 500)
+							}(i));
+						}
+					}
+
+					function anim() {
+						ctx.fillStyle = clearColor;
+						ctx.fillRect(0, 0, w, h);
+						for(var i in drops) {
+							drops[i].draw();
+						}
+						requestAnimationFrame(anim);
+					}
+
+					window.addEventListener("resize", resize);
+				}
+				//@ sourceURL=pen.js
+		</script>
+		<script>
+			if(document.location.search.match(/type=embed/gi)) {
+				window.parent.postMessage("resize", "*");
+			}
+			document.onkeydown = function() {
+				if(event.keyCode == 9) { //如果是其它键，换上相应在ascii 码即可。
+					return false; //非常重要
+				}
+			}
+		</script>
+	</body>
+
+</html>
